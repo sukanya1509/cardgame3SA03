@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import CharacterCard from './CharacterCard.js';
+import CharacterCard from './WordCard.js';
 
 export default class CharacterCard extends Component {
     constructor(props){
