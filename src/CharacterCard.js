@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import CharacterCard from './CharacterCard.js';
-import CharacterCard from './WordCard.js';
+
 
 export default class CharacterCard extends Component {
     constructor(props){
@@ -19,7 +18,9 @@ export default class CharacterCard extends Component {
     render(){
     let className = `card ${this.state.active ? 'activeCard': ''}`
     return (
-    <div className={className} onClick={activate}>{props.value} </div>
+    <div>{this.props.value}
+    className={className} onClick={this.activate}{props.value}
+    </div>
     )
     }
-   }
+   } 

@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 import CharacterCard from './CharacterCard';
-import CharacterCard from './WordCard';
-const word = "Hello";
-import WordCard from './WordCard.js';
+import WordCard from './WordCard';
+import './App.css';
 
-
-class App extends Component {
-  render() {
-    return (
-
-      <div className="card">
-        <WordCard value="hello"/>
+const word = "hello";
+function App() {
+  return (
+    <div>
+    <WordCard value="hello"/>
     </div>
     );
-  }
+
 }
+
 export default App;
