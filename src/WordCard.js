@@ -4,7 +4,7 @@ import CharacterCard from './CharacterCard.js';
 import _ from 'lodash';
 const prepareStateFromWord = (given_word) => {
  let word = given_word.toUpperCase()
-@@ -16,9 +17,7 @@ const prepareStateFromWord = (given_word) => {
+const prepareStateFromWord = (given_word) => {
 export default class WordCard extends Component {
     constructor(props){
         super(props);
@@ -15,8 +15,8 @@ export default class WordCard extends Component {
     }
 
     componentWillMount(){
-@@ -32,15 +31,34 @@ export default class WordCard extends Component {
-        })
+export default class WordCard extends Component {
+        }
     }
 
 
@@ -45,16 +45,15 @@ export default class WordCard extends Component {
         console.log(this.state);
     }*/
 
-    render() {
+   render(){
         console.log(this.state);
         return (
             <div >
                 { Array.from(this.props.value).map((c, i) => 
                 { this.state.chars.map((c, i) => 
                     <CharacterCard value={c} key={i} attempt={this.state.attempt}
-                    activationHandler={this.activationHandler}/>                    
-                )}
+                    activationHandler={this.activationHandler}>                    
+                )
             </div>
         );
-    }
-}
+                }
