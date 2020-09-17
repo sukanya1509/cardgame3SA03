@@ -45,15 +45,14 @@ export default class WordCard extends Component {
         console.log(this.state);
     }*/
 
-   render(){
+   render()
         console.log(this.state);
         return (
-            <div >
+            
                 { Array.from(this.props.value).map((c, i) => 
                 { this.state.chars.map((c, i) => 
-                    <CharacterCard value={c} key={i} attempt={this.state.attempt}
-                    activationHandler={this.activationHandler}>                    
-                )
-            </div>
-        );
+                    <CharacterCard.js value={c} key={i} attempt={this.state.attempt}
+                    activationHandler={this.activationHandler}                   
+               
+   
                 }
