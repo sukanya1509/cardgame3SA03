@@ -3,12 +3,18 @@ import './App.css';
 import CharacterCard from './CharacterCard';
 const word = "Hello";
 
-import CharacterCard from './CharacterCard';
-function App() {
- return (
- <div>
- <CharacterCard value="h"/>
- <CharacterCard value="i"/>
- </div>
- );
+class App extends Component {
+  render() {
+    return (
+      <div>
+          <CharacterCard value="h"/>
+          <CharacterCard value="i"/>
+      </div>
+        {
+          Array.from(word).map((c, i) => <CharacterCard value={c} key={i}/>)
+        }
+     </div>
+    );
+  }
 }
+export default App;
