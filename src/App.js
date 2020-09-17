@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-function App() {
- return (
- <div>
- Hello World
- Hello World
- </div>
- );
+import CharacterCard from './CharacterCard';
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <CharacterCard value="h" />
+        <CharacterCard value="i" />
+      </div>
+
+    );
+  }
 }
+
 export default App;
+
